@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Agent's</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <!----- header --->
+    <header style="border-bottom: 1px solid black;">
+        <navbar class="container">
+            <div class="navbar">
+            <img class="logo" src="logo-revou.png" alt=""/>
+            <div class="menu">
+                <a class="menu-item" href="#rumah">Home</a>
+                <a class="menu-item" href="#package">Our Package</a>
+                <a class="menu-item" href="callus">Call Us</a>
+                <hr />
+            </div>
+        </div>
+        </navbar>
+    </header>
+    <!----- main --->
+    <main>
+        <section id="rumah">
+            <div class="container">
+                <div class="rumah-title">
+                    <h1>Your Trusted Travel Agent's</h1>
+                    <h6>Your happiness is our happiness</h6>
+                </div>
+            </div>
+        </section>
+        <section id="about-contact">
+            <div class="container">
+                <div class="about-contact">
+                <div class="about">
+                    <img class="about-img" src="pemandangan1.jpg" alt=""/>
+                    <button onclick="plusDivs(-1)">Previous</button>
+                    <button onclick="plusDivs(-1)">Next</button>
+                    <div class="about-content">
+                        <div class="content-caption">
+                            <p><i>"Liburan jadi menyenangkan bersama Travel Agentku."</i></p>
+                        </div>
+                        <div class="content-person">
+                            <img src="logo.png" alt="" style="width:50px;height:50px;"/>
+                            <div class="person-info">
+                                <h6>Florence Hughes</h6>
+                                <p>Ibu Rumah Tangga, 28</p>
+                                <hr />
+                            </div>
+                        </div>
+                    </div>
+                 </div>
+                   <aside>
+                    <div class="contact">
+                        <div class="card">
+                            <div class="card-title">
+                                <h4>Contact Us</h4>
+                                <p>Sales akan menghubungi anda 1x24 jam setelah data kami terima.</p>
+                            </div>
+                            <form name="message-form" onsubmit="return validateForm" method="post">
+                                <label for="">Your Name:</label>
+                                <input type="text" name="full-name" placeholder="First and last name">
+                                <br />
+                                <label for="">Email Address:</label>
+                                <input type="text" name="email" placeholder="example@gmail.com">
+                                <label for="">What are you interested in?</label>
+                                <select name="opsi" id="">
+                                    <option value="">A</option>
+                                    <option value="">B</option>
+                                    <option value="">C</option>
+                                </select>
+                                <input type="submit" value="Send">
+                                <br />
+                            </form>
+                            <script>
+                                function validateForm() {
+                                    var nama = document.forms["message-form"]["name"].value;
+                                    var mail = document.forms["message-form"]["email"].value;
+                                    var opsii = document.forms["message-form"]["opsi"].value;
+                                    if (full-name == "" || mail = "" || opsi = "") {
+                                        alert("Tidak boleh ada yang kosong");
+                                        return false;
+                                    }
+                                }
+
+                                var slideIndex =1;
+                                showDivs(slideIndex);
+
+                                function plusDivs(n) {
+                                    showDivs((slideIndex += n));
+                                }
+
+                                function showDivs(n) {
+                                    var i;
+                                    var imgList = document.getElementsByClassName('about-image');
+                                    if (n > imgList.length) slideIndex = 1;
+                                    else if (n < 1) slideIndex = imgList.length;
+
+                                    for (i = 0; i < imgList.length; i++) {
+                                        imgList[i].style.display = 'none';
+                                    }
+
+                                    imgList[slideIndex - 1].style.display = 'block';
+                                }
+                            </script>
+                        </div>
+                    </div>
+            </div>
+        </aside>
+        <div class="about-information">
+            <h6 class="information-title">Use this space to provide users with more information about your offer. Consider it a follow-up to your headline and explain the benefits of your service or product</h6>
+                <ul class="information-list">
+                    <li>
+                        <div class="list-number">1</div>
+                        <p class="list-paragraf">Your first feature, written in the form of a benefit statement.</p>
+                    </li>
+                    <li>
+                        <div class="list-number">2</div>
+                        <p class="list-paragraf">Your second feature, written in the form of a benefit statement.</p>
+                    </li>
+                    <li>
+                        <div class="list-number">3</div>
+                        <p class="list-paragraf">Your third feature, written in the form of a benefit statement.</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <section id="rumahdua">
+            <div class="container">
+                <div class="rumahdua-title">
+                    <h1>Our Package</h1>
+                </div>
+            </div>
+        </section>
+        <section id="rumahtiga">
+            <div class="container">
+                <div class="rumahtiga-title">
+                    <div class="box">
+                        <h4>Bali</h4>
+                        <p>Travel dan Wisata di Bali. kunjungi cagar budaya dan kuliner yang menarik</p>
+                    </div>
+                    <div class="box">
+                        <h4>Japan</h4>
+                        <p>Travel dan Wisata di Japan. kunjungi cagar budaya dan kuliner yang menarik</p>
+                    </div>
+                    <div class="box">
+                        <h4>Singapore</h4>
+                        <p>This description supports and extends the bullet point above.</p>
+                    </div>
+                    <div class="box">
+                        <h4>Bandung</h4>
+                        <p>This description supports and extends the bullet point above.</p>
+                    </div>
+                    <div class="box">
+                        <h4>Surabaya</h4>
+                        <p>This description supports and extends the bullet point above.</p>
+                    </div>
+                    <div class="box">
+                        <h4>Third Feature</h4>
+                        <p>This description supports and extends the bullet point above.</p>
+                    </div>
+            </div>
+            </div>
+            <hr />
+        </section>
+        <section id="rumahempat">
+            <div class="container">
+                <div class="rumahempat-title">
+                    <h1>Your Closing Argument Headline</h1>
+                    <p>Suspendisse egestas rhoncus urna in bibendium. Donec urna neque, euismod sed justo quis, convallis tincidunt risus. Phasellus fringila odio vel erat fringilla,</p>
+                <form action="">
+                    <input type="submit" value="CALL TO ACTION">
+                </form>
+                </div>
+            </div>
+            <hr />
+        </section>
+    </main>
+    <!----- footer --->
+    <footer>
+        <div class="footer">
+            <h4>revou</h4>
+            <p>Terms of Service  Privacy Policy</p>
+            <p>Revou</p>
+        </div>
+    </footer>
+</body>
+</html>
